@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik";
+  color: #bdc1ff;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+main {
+  width: 375px;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 200px auto;
+  grid-row-gap: 25px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #0f1424;
+  justify-items: center;
+}
+
+article {
+  background-color: #1c1f4a;
+  border-radius: 15px;
+  height: 200px;
+  width: 350px;
+  font-size: 0.9rem;
+}
+article .name-photo {
+  background-color: #5847eb;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  height: 65%;
+}
+article .name-photo .wrapper-name {
+  display: flex;
+  flex-direction: column;
+}
+article .name-photo .wrapper-name span {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+article .name-photo .wrapper-name .name {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: 300;
+}
+article .name-photo .wrapper-photo {
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 80px;
+  margin-left: 30px;
+}
+article .name-photo .wrapper-photo img {
+  width: 80px;
+  height: 80px;
+}
+article ul {
+  margin: 0;
+  padding: 0;
+  height: 35%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+article ul li {
+  display: block;
+}
+article ul li a {
+  display: block;
+  text-decoration: none;
+  color: #bdc1ff;
+  font-size: 1.1rem;
+}
+article ul li a:hover {
+  color: white;
+}
+article ul li a:active {
+  color: white;
+}
+
+.card {
+  background-color: #ff8c66;
+  background-image: url("../images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: -3%;
+  background-size: 70px;
+  border-radius: 15px;
+  position: relative;
+  width: 350px;
+  height: 150px;
+}
+.card .card-content {
+  height: 74%;
+  width: 100%;
+  background-color: #1c1f4a;
+  position: absolute;
+  bottom: -2px;
+  border-radius: 15px;
+}
+.card .card-content .wrapper-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.card .card-content .wrapper-content .row-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding: 5px;
+}
+.card .card-content .wrapper-content .row-content button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.card .card-content .wrapper-content .row-content .type {
+  font-weight: 500;
+  color: white;
+}
+.card .card-content .wrapper-content .row-content .hours {
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=style.css.map */
