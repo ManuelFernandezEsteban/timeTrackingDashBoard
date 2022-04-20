@@ -18,6 +18,8 @@ $dark-blue: hsl(235, 46%, 20%)
 $desaturated-blue: hsl(235, 45%, 61%)
 $pale-blue: hsl(236, 100%, 87%)
 $font-family:'Rubik'
+$tablet:768px
+$desktop:1368px
 
 body
     margin: 0
@@ -26,53 +28,99 @@ body
     font-family: $font-family
     color: $pale-blue
     width: 100vw
-    min-height: 100vh    
+    min-height: 100vh
+    background-color: black
+
+main    
+    height: 100vh
     display: flex
     flex-direction: column    
     align-items: center
     justify-content: center    
-    background-color: black
-main
+
+.wrapper
+    
     width: 375px
-    height: 100%    
+    height: 100vh    
     display: grid
     grid-template-columns: repeat(1,1fr)
     grid-template-rows: 200px auto
     grid-row-gap: 25px
-    padding-top: 100px
-    padding-bottom: 100px
+    padding-top: 80px
+    padding-bottom: 80px
     background-color: $very-dark-blue
-    justify-items: center
+    justify-items: center     
+    @media ( min-width: $tablet )
+        width: 750px
+        grid-template-columns: repeat(2,1fr)
+        grid-template-rows: 200px auto
+        background-color: $very-dark-blue
+    @media ( min-width: $desktop )
+        width: 1100px
+        grid-template-columns: repeat(4,1fr) 
+        grid-template-rows: repeat(2,240px)       
+        grid-gap: 25px  
+        align-content: center 
+        padding: 200px 
+       
+        
 article
     background-color: $dark-blue
     border-radius: 15px
     height: 200px
-    width: 350px
+    width: 330px
+    @media ( min-width: $tablet )  
+        width: 710px
+        grid-column: 1 / span 2
+    @media ( min-width: $desktop )
+        width: 100%
+        height: auto
+        grid-column: 1 
+        grid-row: 1 / span 2
     .name-photo
         background-color: $blue
         border-radius: 15px
         display: flex        
         align-items: center
         height: 65%
+        @media ( min-width: $desktop )
+            flex-direction: column
+            align-items: flex-start
+            justify-content: center
         .wrapper-name
             display: flex
             flex-direction: column
-            span
+            margin-top: 40px
+            @media ( min-width: $desktop )
+                
+            .name-content, .text-min
                 margin-left: 20px
                 margin-top: 5px
+                @media ( min-width: $desktop )
+                    margin-left: 20px
+                    margin-top: 0px                   
+                    display: flex
+                    flex-direction: column
+                    
+
             .name
                 font-size: 1.5rem
                 color: white
                 font-weight: 300
+                @media ( min-width: $desktop )
+                    font-size: 2.5rem
         .wrapper-photo
             width: 80px
             height: 80px
             border: 2px solid white
             border-radius: 80px
             margin-left: 30px
+            @media ( min-width: $desktop )
+                margin-left: 20px
             img
                 width: 80px
                 height: 80px
+                
     ul
         margin: 0
         padding: 0
@@ -81,8 +129,16 @@ article
         display: flex
         justify-content: space-around
         align-items: center
+        @media ( min-width: $desktop )
+            flex-direction: column
+            align-items: flex-start
+            margin-left: 20px
+            justify-content: center
+            
         li
             display: block
+            @media ( min-width: $desktop )
+                padding: 10px
             a
                 display: block
                 text-decoration: none
@@ -103,8 +159,13 @@ article
     background-size: 70px
     border-radius: 15px
     position: relative
-    width: 350px
-    height: 150px
+    width: 330px
+    height: 170px
+    @media ( min-width: $desktop )
+        width: 100%
+    @media ( min-width: $desktop )
+        height: auto
+        width: 100%
     .card-content
         height: 74%
         width: 100%
@@ -112,18 +173,23 @@ article
         position: absolute
         bottom: -2px
         border-radius: 15px
+        @media ( min-width: $desktop )
+            height: 83%
         .wrapper-content
             display: flex
             flex-direction: column
             justify-content: center
             align-items: center
             height: 100%
-            .row-content
+            @media ( min-width: $desktop )
+                padding-left: 15px
+                padding-right: 15px
+            .row-content-sup, .row-content-inf
                 display: flex
                 justify-content: space-between
                 align-items: center
                 width: 90%
-                padding: 5px
+                padding: 5px  
                 button
                     border: none
                     background: transparent
@@ -131,14 +197,21 @@ article
                 .type
                     font-weight: 500
                     color: white
+                    @media ( min-width: $desktop )
+                        font-size: 1.4rem
                 .hours
                     color: white
                     font-size: 2rem
                     font-weight: 300
-                .last
-
-
-                    
-                
+                    @media ( min-width: $desktop )
+                        font-size: 3.5rem
+                .last                    
+                    font-size: 1rem
+                    font-weight: 300
+            .row-content-inf
+                @media ( min-width: $desktop )
+                    flex-direction: column    
+                    align-items: flex-start       
+            
 
         
