@@ -1,4 +1,4 @@
-const url = '../../data.json';
+const url = './../data.json';
 
 const wrapper = document.querySelector('.wrapper');
 const day = document.querySelector('#daily');
